@@ -94,4 +94,152 @@
 
       <div class="tags">
         <div class="tag">Vegetarian</div>
-        <div class="tag">S
+        <div class="tag">Spicy</div>
+        <div class="tag">Quick Meals</div>
+        <div class="tag">Chef's Pick</div>
+      </div>
+
+      <div style="margin-top:18px;display:flex;gap:12px;align-items:center">
+        <div class="card hero-card" style="flex:1">Order time: <strong>25–35 mins</strong></div>
+        <div class="card hero-card">Free delivery over <strong>₹499</strong></div>
+      </div>
+    </div>
+
+    <aside class="card" style="height:100%">
+      <h3 style="margin-top:0">Chef's Specials</h3>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1604908177522-4e7d1d2dd3d8?q=80&w=400&auto=format&fit=crop&cs=tinysrgb" alt="food" style="width:86px;height:64px;border-radius:8px;object-fit:cover">
+          <div>
+            <strong>Butter Chicken</strong>
+            <div style="color:var(--muted);font-size:13px">Creamy tomato curry with naan</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1551218808-94e220e084d2?q=80&w=400&auto=format&fit=crop&cs=tinysrgb" alt="food" style="width:86px;height:64px;border-radius:8px;object-fit:cover">
+          <div>
+            <strong>Veg Biryani</strong>
+            <div style="color:var(--muted);font-size:13px">Saffron rice with roasted veggies</div>
+          </div>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1543353071-087092ec3930?q=80&w=400&auto=format&fit=crop&cs=tinysrgb" alt="food" style="width:86px;height:64px;border-radius:8px;object-fit:cover">
+          <div>
+            <strong>Paneer Tikka</strong>
+            <div style="color:var(--muted);font-size:13px">Smoky grilled paneer with chutney</div>
+          </div>
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <section id="menu" class="menu-section">
+    <h2 style="max-width:1100px;margin:0 auto;padding:0 20px">Popular Dishes</h2>
+    <div class="grid" style="margin-top:12px">
+      <article class="card dish">
+        <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?q=80&w=1200&auto=format&fit=crop&cs=tinysrgb" alt="dish">
+        <h3>Margherita Pizza</h3>
+        <p>Classic pizza with fresh basil and mozzarella.</p>
+        <div class="dish-footer"><div class="price">₹349</div><button onclick="addToCart('Margherita Pizza',349)" class="cta">Add</button></div>
+      </article>
+
+      <article class="card dish">
+        <img src="https://images.unsplash.com/photo-1604908813019-3b0a7ef7d11e?q=80&w=1200&auto=format&fit=crop&cs=tinysrgb" alt="dish">
+        <h3>Paneer Tikka Wrap</h3>
+        <p>Grilled paneer with veggies and spicy mayo.</p>
+        <div class="dish-footer"><div class="price">₹199</div><button onclick="addToCart('Paneer Tikka Wrap',199)" class="cta">Add</button></div>
+      </article>
+
+      <article class="card dish">
+        <img src="https://images.unsplash.com/photo-1516685018646-549d5cf83f6f?q=80&w=1200&auto=format&fit=crop&cs=tinysrgb" alt="dish">
+        <h3>Veg Biryani</h3>
+        <p>Aromatic basmati rice with mixed vegetables and raita.</p>
+        <div class="dish-footer"><div class="price">₹299</div><button onclick="addToCart('Veg Biryani',299)" class="cta">Add</button></div>
+      </article>
+
+      <article class="card dish">
+        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=1200&auto=format&fit=crop&cs=tinysrgb" alt="dish">
+        <h3>Chocolate Brownie</h3>
+        <p>Warm fudgy brownie with ice cream.</p>
+        <div class="dish-footer"><div class="price">₹149</div><button onclick="addToCart('Chocolate Brownie',149)" class="cta">Add</button></div>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="card">
+      <h2>About Foodie</h2>
+      <p style="color:var(--muted)">Foodie started with a love for home-cooked flavours and a mission to make delicious meals accessible. We work with local chefs and farms to bring you fresh, seasonal dishes every day.</p>
+    </div>
+  </section>
+
+  <section id="contact" class="menu-section">
+    <h2 style="max-width:1100px;margin:0 auto;padding:0 20px">Get in touch</h2>
+    <div class="grid" style="margin-top:12px">
+      <div class="card">
+        <h3>Contact Us</h3>
+        <form onsubmit="event.preventDefault(); alert('Thanks! We will contact you shortly.')">
+          <input type="text" placeholder="Your name" required>
+          <input type="email" placeholder="Email" required>
+          <textarea placeholder="Message" rows="4" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+      </div>
+
+      <div class="card">
+        <h3>Order Summary</h3>
+        <div id="cartItems">No items yet.</div>
+        <div style="margin-top:12px"><strong>Total: ₹<span id="cartTotal">0</span></strong></div>
+        <button class="cta" onclick="placeOrder()">Place Order</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div>© <strong>Foodie</strong> <span id="year"></span></div>
+    <div>Made with ❤️ • Built for demo</div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const cart = [];
+    function addToCart(name, price){
+      cart.push({name, price});
+      renderCart();
+    }
+    function renderCart(){
+      const el = document.getElementById('cartItems');
+      const totalEl = document.getElementById('cartTotal');
+      if(cart.length===0){ el.innerHTML='No items yet.'; totalEl.textContent='0'; return }
+      el.innerHTML = '<ul style="padding-left:18px;margin:0">'+cart.map((c,i)=>`<li>${c.name} — ₹${c.price} <button onclick="removeItem(${i})" style="margin-left:8px">remove</button></li>`).join('')+'</ul>';
+      const total = cart.reduce((s,c)=>s+c.price,0);
+      totalEl.textContent = total;
+    }
+    function removeItem(idx){ cart.splice(idx,1); renderCart(); }
+    function placeOrder(){ if(cart.length===0){ alert('Your cart is empty'); return } alert('Order placed! Total: ₹' + cart.reduce((s,c)=>s+c.price,0)); cart.length=0; renderCart(); }
+
+    function filterMenu(){ const q = document.getElementById('searchInput').value.toLowerCase(); if(!q) { alert('Type a dish or ingredient'); return } const dishes = document.querySelectorAll('.dish'); dishes.forEach(d=>{
+      const text = d.innerText.toLowerCase(); d.style.display = text.includes(q) ? '' : 'none';
+    })}
+
+    function toggleMenu(){ const nav = document.querySelector('nav ul'); if(!nav) return; nav.style.display = nav.style.display==='flex' ? 'none' : 'flex'; }
+  </script>
+  <script>
+  window.watsonAssistantChatOptions = {
+    integrationID: "5aeaf201-b86f-44f9-8fc0-bbc1d604ba77", // The ID of this integration.
+    region: "eu-de", // The region your integration is hosted in.
+    serviceInstanceID: "837346b9-0a41-47da-bbf6-7a10b3c65cf2", // The ID of your service instance.
+    onLoad: async (instance) => { await instance.render(); }
+  };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+    document.head.appendChild(t);
+  });
+</script>
+</body>
+</html>
